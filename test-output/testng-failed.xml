@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
+<suite guice-stage="DEVELOPMENT" name="Failed suite [Suite]" parallel="tests">
+  <listeners>
+    <listener class-name="com.listeners.test.ReporterClass"/>
+  </listeners>
+  <test thread-count="5" name="AssertionTest(failed)" parallel="tests">
+    <classes>
+      <class name="com.testng.test.Assertion">
+        <methods>
+          <include name="hardAssertionTestMethod"/>
+          <include name="softAssertionTestMethod"/>
+        </methods>
+      </class> <!-- com.testng.test.Assertion -->
+    </classes>
+  </test> <!-- AssertionTest(failed) -->
+</suite> <!-- Failed suite [Suite] -->

@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
+<suite name="Suite" parallel="tests" >
+  <!-- <test thread-count="5" name="Test">
+  	<groups>
+  		<run>
+  			<include name="smoke"></include>
+  		</run>
+  	</groups>
+  	<classes>
+  		<class name="com.testng.test.Group" />
+  	</classes>		
+  </test> Test
+  <test thread-count="5" name="AnotherTest">
+  	<classes>
+  		<class name="com.testng.test.TestClass">
+  		<methods>
+  			<include name="firstTestMethodForAnotherTest"></include>
+  		</methods>
+  		</class>
+  	</classes>
+  </test> Test   -->
+  <listeners>
+  	<!--  <listener class-name="com.listeners.test.ListenerClass"></listener> -->
+  	<listener class-name="com.listeners.test.ReporterClass"></listener>
+  </listeners>
+  <test thread-count="5" name="AssertionTest">
+  	<classes>
+  		<class name="com.testng.test.Assertion">
+  		<methods>
+  			<include name="softAssertionTestMethod"></include>
+  			<include name="hardAssertionTestMethod"></include>
+  		</methods>
+  		</class>
+  	</classes>
+  </test>
+  <test thread-count="5" name="ParameterTest">
+  	<classes>
+  		<class name="com.testng.test.Parameter">
+  		<parameter name="browser" value="edge"></parameter>
+  		<parameter name="os" value="windows"></parameter>
+  		</class>
+  	</classes>
+  </test>
+</suite> <!-- Suite -->
